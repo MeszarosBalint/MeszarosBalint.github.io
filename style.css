@@ -1,28 +1,75 @@
-/* styles.css */
-
-/* Mobile styles */
+/* Alap stílusok */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
-header, footer {
-    background-color: #333;
-    color: #ffffff;
+    padding: 0 15px; /* Mobilbarát margó */
+    background-color: #fef576; 
+    color: #333;
+    line-height: 1.6;
     text-align: center;
-    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Eltünteti a vízszintes görgetést */
 }
 
+/* Fő tartalom */
 main {
-    padding: 1em;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    transition: box-shadow 0.3s ease-in-out;
+    word-wrap: break-word; /* Hosszú szavak megtörése */
+    overflow-wrap: break-word; /* További védelem a szöveg kilógása ellen */
 }
 
-/* Styles for larger screens */
-@media (min-width: 600px) {
-    main {
-        max-width: 600px;
-        margin: 0 auto;
+main:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Bekezdések */
+p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #555;
+    text-align: justify;
+    line-height: 1.8;
+    word-wrap: break-word; /* Szöveg törése szükség esetén */
+    overflow-wrap: break-word; /* Törés, ha túl hosszú szavak lennének */
+}
+
+/* Mobilbarát stílusok */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
     }
+
+    main {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+.different-bg {
+    background-color: #6aebfc; /* Világoskék háttérszín */
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.different-bg p {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.different-bg img {
+    max-width: 100%;
+    border-radius: 8px;
 }
